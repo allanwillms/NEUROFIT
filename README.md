@@ -4,7 +4,7 @@ NEUROFIT is a program which fits Hodgkin-Huxley models to voltage-clamp data.
 NEUROFIT should run on any Microsoft Windows environment.
 
 Bug reports and comments should be sent to Allan Willms.
-Installation Instructions
+## Installation Instructions
 <ul>
   <li>  Download NEUROFITInstall.zip (2.8 MB)
  <li>   Install NEUROFIT by simply unzipping the file NEUROFITInstall.zip somewhere; it doesn't matter where. You will get a directory called NEUROFIT.
@@ -12,9 +12,10 @@ Installation Instructions
  <li>   Usage instructions and a tutorial are available from within NEUROFIT by clicking on "Help".
   <li>  If you use this software to generate any research publication, please reference it as
     A.R. Willms, NEUROFIT: Software for fitting Hodgkin-Huxley models to voltage-clamp data, J. Neurosci. Meth. 121 (2002), 139-150. 
+    <li> All source code is available on this github site if you wish to modify it and build the program yourself, but the zipped Install file should be easiest for Windows users.
       </ul>
 
-<h3>Acknowledgements</h3>
+## Acknowledgements
 The code which performs the nonlinear least squares fitting is a C translation and adaptation of an implementation of the Levenberg-Marquardt algorithm written in Fortran and freely available from the Netlib Mathematical Software Repository (lmder.f). The translation was done by Howie Kuo and adaptations to allow for linear inequality constraints were completed by Allan Willms. The remainder of the code for the nonlinear fitting algorithm, and all of the code for the quick fit linear algorithm was written by Allan Willms. The user interface was written by Greg Ewing and Allan Willms using the Python interpretive language (freely available from http://python.org/). A Python interpreter is bundled as part of the NEUROFIT package.
 
 Support for this project has been given by:
@@ -24,7 +25,7 @@ Support for this project has been given by:
    <li> The laboratory of Prof. R.M. Harris-Warrick, Department of Neurobiology and Behavior, Cornell University, Ithaca, USA. 
 </ul>
 
-<h3>References</h3>
+## References
 This software is introduced and its convergence properties are described in:
 <ul>
 <li>A.R. Willms, NEUROFIT: Software for fitting Hodgkin-Huxley models to voltage-clamp data, J. Neurosci. Meth. 121 (2002), 139-150.
