@@ -1,0 +1,71 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Mathematical Model</h2>
+<img src="eqns.gif" align="right" width=436 height=641 border=1 hspace=4>
+The electrical current through the ion channels is a product of the
+conductance, <em>g</em>, and the difference between the membrane
+potential, <em>V</em>, and the reversal potential, <em>E</em><sub>rev</sub>,
+for the current, (1).
+<p>
+The conductance is given by a Hodgkin-Huxley (HH) model, (2), where
+<em>g</em><sub>max</sub> is the maximal conductance,
+<em>p</em> is the number of independent activation gates,
+and <em>m</em> and <em>h</em> are the fraction of open activation 
+and inactivation gates respectively.
+<p>
+As a generalization of the usual HH scheme, the channels are classified
+into one of several groups depending on their inactivation properties.
+The number of inactivating channel groups, 
+<em>n</em><sub>h</sub> is specified in
+the <a href="modelspecs.html">Model Specifications Panel</a>. 
+All of the channels in all of these groups 
+have one inactivation gate and identical <em>steady-state</em> 
+inactivation properties,
+but each group has different <em>kinetic</em> inactivation properties.
+Further, if the number of non-inactivating channel groups, 
+<em>n</em><sub>nonh</sub>,
+is specified as 1, then there is an additional group which has no
+inactivation at all.  Thus the total number of groups is <em>n</em>, (3);
+<em>n</em> is at least one.
+The fraction of channels in group <em>i</em> is given by 
+<em>f<sub>i</sub></em> ; these fractions add to one, (4).
+Consequently, there are only <em>n</em>-1 free parameters
+<em>f<sub>i</sub></em> , as <em>f<sub>n</sub></em> is equal to
+one minus the sum of the others.
+<em>h<sub>i</sub></em> represents the fraction of open channels in group 
+<em>i</em>, and the overall fraction of channels with open 
+inactivation gates, <em>h</em> is given by (5).
+<p>
+The dynamics of the gates are governed by the first order differential
+equations (6) and (7),
+where the steady-state curves are given by the Boltzmann functions,
+(8) and (9), with half potentials, <em>V</em><sub>2<em>x</em></sub>,
+and slope factors, <em>s<sub>x</sub></em>, <em>x</em> = <em>m</em> or
+<em>h</em>.
+The time constants of activation and inactivation are voltage dependent
+and are specified independently for each step potential.
+<p>
+NEUROFIT fits voltage clamp data.  Each sweep 
+has a specified prestep potential, <em>V</em><sub>p</sub>, 
+and step potential, <em>V</em><sub>s</sub>.  
+The data for each sweep consists of a set
+of times and electrical currents, (<em>t</em><sub>n</sub>, 
+<em>I</em><sub>n</sub> ), n = 1,2,3,...,N.
+For each sweep, equations (6) and (7) are solved analytically 
+with <em>V</em> = <em>V</em><sub>s</sub>, using
+initial conditions determined by (8) and (9) evaluated at 
+<em>V</em> = <em>V</em><sub>p</sub>.
+Thus it is implicitly assumed that the prestep was held sufficiently
+long for the activation and inactivation to have achieved their 
+steady-state values.
+The current is then calculated from (1)-(5) and compared to the observed
+current.  Adjustments are made to the parameter values based on this
+comparison and the entire process is iterated until convergence 
+(see <a href="algspecs.html">Algorithm Specifications Panel</a>)
+is achieved or another termination condition is encountered.
+</body>
+</html>

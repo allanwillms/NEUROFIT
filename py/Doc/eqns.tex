@@ -1,0 +1,26 @@
+\documentclass[12pt,leqno]{article}
+% 
+% I generated a gif of this as follows: latex it, then view in
+% xdvi at 12%, then do a grab from xv of the xdvi window.  Crop
+% the equations themselves and save as a greyscale gif.  This yields
+% a better gif than letting xv convert the postscript.
+\input{macro}
+\input{fullpageA4}
+\begin{document}
+\LARGE
+\bea
+I &=& g \left( V-E_\mathrm{rev} \right) \\[2ex]
+g &=& g_\mathrm{max} m^p h \\[2ex]
+n &=& n_\mathrm{h} + n_\mathrm{nonh} \\[2ex]
+\sum_{i=1}^n f_i &=& 1 \\[2ex]
+h &=& \left\{ \ba{ll}
+\dss\sum_{i=1}^{n_\mathrm{h}} f_i h_i, & \mbox{if $n_\mathrm{nonh}=0$} \\[2ex]
+\dss\sum_{i=1}^{n_\mathrm{h}} f_i h_i + f_n,\; & \mbox{if $n_\mathrm{nonh}=1$} 
+\ea \right. \\[2ex]
+\ode{m}{t} &=& \frac{m_\infty(V) - m}{\tau_m(V)} \\[2ex]
+\ode{h_i}{t} &=& \frac{h_\infty(V) - h_i}{\tau_{h_i}(V)},\hspace{0.5cm}
+i=1,\ldots,n_\mathrm{h}\\[2ex]
+m_\infty(V) &=& \frac{1}{1+\exp\left(\frac{V-V_{2m}}{s_m}\right)} \\[2ex]
+h_\infty(V) &=& \frac{1}{1+\exp\left(\frac{V-V_{2h}}{s_h}\right)}
+\eea
+\end{document}

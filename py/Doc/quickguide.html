@@ -1,0 +1,162 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2><a name="QG">Quick Guide</a></h2>
+Steps for using NEUROFIT:
+<ol>
+<li><strong>Open</strong> an existing project from the 
+<a href="menus.html">File Menu</a> 
+or define a <strong>New</strong> project (default).
+<li><strong>Specify data</strong>:
+<ul type="disc">
+<li><a href="fileselect.html">Select Data Files</a> 
+from the 
+<a href="menus.html">Data Menu</a>.  
+There are two types of
+data files, those which contain data from experiments with varying step
+potentials, and those from experiments with varying pre-step potentials.
+You may specify zero, one, or more files for each type.
+Data files may either be in Axon Binary Format (<code>abf</code>) 
+or ASCII text files with the data in columns.
+(See <a href="dataformat.html">Data File Formats</a>.)
+If you are using text files, a window will appear in which you specify
+the 
+<a href="units.html">units</a>
+for the data in the files.
+All of the data will be plotted in the two panels on the right.
+(You may view selected files or sweeps by clicking on the appropriate
+selection
+bars in the panels to the left of the plotted data. The orange highlighted
+bar indicates which data is currently being viewed.  See the 
+<a href="datadisp.html">Data Display Panel</a>.)
+<li> If the data files are <code>abf</code> format, the
+voltage levels and the start and end times of the voltage step will 
+be determined from the files.  For each text format data file, you
+will need to:<br>
+<a href="voltagespecs.html">Set voltages and voltage step start and 
+end time points</a>:<br>
+This is done by clicking on the "Voltages..." button above the displayed
+data.
+Once the voltages are specified, the time constants for each voltage level
+will appear in the parameter panel at the bottom left.
+Use &lt;<code>ctrl</code>&gt;-left mouse button to locate the start of the 
+voltage step on the plot, and &lt;<code>ctrl</code>&gt;-right 
+mouse button to locate the
+end of the voltage step.  It is essential that the limits of the 
+voltage step be determined in this way.
+(See <a href="zoom.html">Zooming</a> for how to zoom in/out on the data.)
+<li>Exclude unwanted sweeps.  To the left of each sweep number in the
+<a href="datadisp.html">Data Display Panel</a>
+there is a dot which
+indicates whether that sweep is to be included (dark blue) or not (light
+blue).
+Clicking on the dot toggles the sweep on and off.  In this way,
+sweeps within a file which contain no useful data can be easily
+excluded.  (Note that the colour of the plotted data matches the toggle
+switch.)
+If you turn off a sweep and it is the only one at a particular 
+step potential, you will need to make sure the corresponding time
+constant parameters are turned off, that is, not fit. (See "Set Model 
+Parameter information" below.)
+</ul>
+<li><strong>Set <a href="modelspecs.html">Model Specifications</a></strong>:
+<ul type="disc">
+<li>Specify values for the number of inactivating channel groups and the
+number of non-inactivating channel groups (the two grey boxes top left)
+by first clicking on the grey field.
+<li>Specify the number of independent activation gates (p).
+</ul>
+<li><strong>Set <a href="algspecs.html">Algorithm Specifications</a></strong>.  
+(In many situations the default values should be sufficient.)
+<li><strong>Set <a href="regions.html">Fitting and Noise Calculation 
+Regions</a></strong>:
+<ul type="disc">
+<li>The fitting regions (shown by the green vertical lines on the plotted data)
+indicate which part of the included data are to be fit.
+By default, the fitting region includes the entire trace from
+the start of the voltage step to the end of the voltage step.
+These regions can be reduced in size (for example, to eliminate noisy data
+at the start of the voltage step) by moving the handles at the bottom of
+the plots.
+The fitting region is initially the same for all files and all sweeps.
+To change it for all files and sweeps, simply click on the leftmost 
+selection bar before adjusting the region. 
+To change the region for just one file, or just one sweep within a file,
+first click on the appropriate selection bar so that the desired file/sweep is
+shown before adjusting the region.
+Stripes in the selection bar indicate that the region for the corresponding
+data has been altered from the default.  
+To reset the region to the default, click on the appropriate striped
+selection bar and then click on the "reset" button at the bottom left
+of the plot.
+<li>The noise calculation region (shown by the yellow vertical lines on
+the plotted data) should enclose a relatively flat portion
+of the data from which an independent estimate of the noise will be made.
+These regions are adjusted in a similar manner to the fitting regions.
+(The data in these regions will be fit to a polynomial of degree as
+specified in the 
+<a href="algspecs.html">Algorithm Specifications Panel</a>.)
+</ul>
+<li><strong>Set <a href="parms.html">Model Parameter</a> information</strong>:
+<ul type="disc">
+<li>For each parameter specify whether it should be fit (default) or held
+constant at its initial value, by using the check boxes to the left of 
+the parameter name in the <a href="parms.html">Model Parameters Panel</a>.
+<li>Specify any required initial values.
+"Full Fit" requires initial values for <em>all</em>
+parameters, while "Quick Fit" requires an initial value
+for just the reversal potential, <em>E</em><sub>rev</sub>, and
+any parameters that are held constant.
+</ul>
+<li><strong>Fit the data</strong>:
+<ul type="disc">
+<li> Clicking on the "Quick Fit" button does a quick, linear, rough fit
+of the data.  It is mostly useful for generating initial values for
+a Full Fit.
+The results from "Quick Fit" will be placed in the fitted
+value column and the resulting curves will be plotted.
+You can transfer the fitted values (all or individually) to the initial 
+value column using the transfer buttons.
+Note that some of values obtained by "Quick Fit" may be unreasonable 
+(especially inactivation time constants if <em>n</em><sub>h</sub> is 
+greater than one)
+and may need manual modification before doing a Full Fit.
+<li> Clicking on the "Full Fit" button does a full, nonlinear fit
+of the data using the initial values of the parameters as a starting
+point.
+The quality of the initial values will influence the speed and 
+accuracy of the fitting algorithm, but generally, the results from
+"Quick Fit" will be sufficient.
+(As an additional aid to obtaining better initial values,
+set the Numerical Specification "Max Function Evals" to 1 and then
+click on the "Full Fit" button.  This forces the algorithm to
+terminate after one evaluation and has the effect of simply plotting the
+curves indicated by the initial values overtop the data.  Be sure
+to reset Max Function Evals to a reasonable number before proceding.)
+Fitting results will be displayed in the 
+<a href="results.html">Fitting Results Panel</a>, bottom right,
+and in the <a href="parms.html">Model Parameters Panel</a>.
+</ul>
+<li><strong>Save the results</strong>:
+<ul type="disc">
+<li> Selecting "Save" or "Save As" from the 
+<a href="menus.html">File Menu</a>
+will save your current settings and values in a NEUROFIT project file 
+(extension "nfp").  This file can later be opened from NEUROFIT and
+further processing of the data completed.
+It is recommended that you do not save any project files in
+the NEUROFIT directory itself, otherwise, you risk losing those
+files if and when you download and install a newer version
+of the NEUROFIT software.
+<li> Selecting "Save Report" from the 
+<a href="menus.html">File Menu</a>
+will create a readable formatted text file giving information on
+the data and the fitting results.
+This file is intended for viewing/printing.
+</ul>
+</ol>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<table width=100%>
+<tr><td>
+<!--#include virtual="test.shtml"-->
+</td><td>
+<h2>Data Display Panel</h2>
+The Data Display Panel has two plotting areas and two corresponding data
+description areas.
+The upper areas are for data from voltage-clamp experiments with a constant
+prestep potential but varying step potentials, 
+while the lower areas are for data from experiments with varying prestep 
+potentials but a constant step potential.
+<p>
+<table align="center">
+<tr><td>
+<img alt="Data Display Panel" src="datadisp.gif"
+border=1 hspace=3 vspace=3 width=528 height=497>
+</td></tr></table>
+<p>
+<h3>Data Description Area</h3>
+The scrollable area to the left of the plot for each type of data presents
+information on the files selected and all of the data within each file.
+You may specify multiple files for each type of data, although
+one file for each type is typical for an inactivating current, and
+this is the situation displayed to the right.
+<h5>File names and voltage levels</h5>
+For the varying step potential data, each file contains a number of 
+voltage-clamp experiments (sweeps) each with the same prestep potential.
+The name of the file and the prestep potential for that file are given
+above a list of each of the sweep numbers and their corresponding step
+potentials.
+If the data files are ABF files 
+(see <a href="dataformat.html">Data File Formats</a>) then this
+information is read from the file header.
+If the data files are text files then the user must enter the
+voltage levels by clicking on the "Voltages..." button above the plot, or
+selecting "Voltage Levels" from the
+<a href="menus.html">Data Menu</a>.
+If multiple files are used they may each have a different prestep potential.
+<h5>Sweep in/exclusion</h5>
+To the left of each sweep number there is a dot which
+indicates whether that sweep is to be included (dark blue) or not (light
+blue).
+Clicking on the dot toggles the sweep on and off.  In this way,
+sweeps within a file which contain no useful data can be easily
+ignored.  The plotted data has the corresponding colour coding.
+(Note that the sweep is still plotted, but the 
+data in that sweep is not fit.)
+<h5>Data Selection for viewing and plot functions</h5>
+On the far left of the Data Description Area 
+are a sequence of three types of data selection bars.  
+The orange highlighted bar indicates which data is currently
+being shown in the Data Plot Area.
+The leftmost bar selects all of the sweeps from all of the files,
+the middle bars select all of the sweeps from just one file, and the
+rightmost bars select individual sweeps.
+Note that these bars do not affect what data is fit, only what is
+displayed.
+The currently selected data also determines how the 
+<a href="regions.html">fitting and noise calculation region</a> 
+sliders work (green and yellow sliders on the plots), and
+to which data 
+<a href="voltagespecs.html">voltage step strart and end time specifications</a> 
+apply.
+<h5>Sweep specific output</h5>
+On the far right of the Data Description Area are two columns which are
+filled in after a fit has completed.
+The column labelled "Noise" gives the noise level for each sweep.
+The noise level is the standard deviation of the fit of the data
+in the <a href="regions.html">Noise Calculation Region</a>
+to a polynomial of order specified
+in the <a href="algspecs.html">Algorithm Specifications Panel</a>.
+The column labelled "Var%" gives the percentage contribution of that
+sweep to the overall variance of the fit.
+<p>
+For the varying prestep potential data, the description area is
+similar expect that the step potential for each file is given above
+a list of the prestep potentials for each sweep.
+<h3>Data Plot Area</h3>
+The data selected by the orange highlighted data selection bar
+is plotted in the plot area.
+All data that lies outside the regime of the model, that is, data recorded
+from before the voltage step started or after it ended, is plotted in grey.
+Data recorded during the voltage step is plotted in either dark blue, if
+the sweep is to be included in the fitting, or light blue if it is not.
+After a fit has completed, the fitted curves are plotted over top the 
+data in red.
+<p>
+If the data files are text format, then the start and end time of the voltage
+step are initially set to be the first and last data point.
+The correct start and end times must be manually specified before fitting.  
+See <a href="voltagespecs.html">Voltage and Voltage Step Specifications</a>.
+<p>
+By default, the axes are initially set to display all of the data within
+the voltage step.
+It is possible to change the view of the data by using the
+"Zoom" button above the plot or using the mouse to drag out a box.
+See <a href="zoom.html">Zooming</a>.
+<p>
+At the bottom of the Data Plot Area there are two sets of movable sliders,
+green and yellow, which specify the 
+<a href="regions.html">Fitting and Noise Calculation Regions</a> respectively,
+and two buttons for resetting these regions to their defaults.
+</td></tr></table>
+</body>
+</html>

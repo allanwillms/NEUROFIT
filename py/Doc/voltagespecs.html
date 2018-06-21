@@ -1,0 +1,46 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Voltage and Voltage Step Specificatons</h2>
+It is only necessary to enter this information manually if
+the data is from an ASCII text file.
+If the data is from abf files, this information is determined from
+those files.
+<p>
+<img alt="Voltages..." src="voltagespecs_vs.gif" align="right"
+border=1 hspace=3 vspace=3 width=219 height=400>
+<h3>Voltage Levels</h3>
+Voltage levels for each data file
+are specified by clicking on the
+"Voltages..." button at the top of the data description area 
+for each type of data (varying step or varying prestep) in the
+<a href="datadisp.html">Data Display Panel</a>,
+or by choosing "Voltage Levels" from the pull-down
+<a href="menus.html">Data Menu</a>.
+For varying step data files, both the prestep voltage and
+the step voltage for each sweep within the file are required.
+Different files may have different prestep or step levels.
+Simillarly, for varying prestep data files, both the step voltage
+and the prestep voltage for each sweep within the file are required.
+<p>
+The units refer to the numbers specified in this panel.  If the project
+units are different, these values will be scaled appropriately before
+being used/displayed in the rest of the program. (See 
+<a href="units.html">Measurement Units</a>.)
+<h3>Voltage Step Start and End Times</h3>
+The start and end times of the voltage step are specified by holding down
+the control key and clicking on the plot at the appropriate location
+with the left mouse button (for the start) and right mouse button (for the
+end).
+You may need to <a href="zoom.html">zoom</a> in first.
+Note that start and end times specified in this manner only apply to
+data from text files, and only apply to the data currently being displayed.
+Use the selection bars to select the appropriate data before setting the
+start and end times.  It is therefore possible to specify identical
+start and end times for all sweeps, or, different start
+and end times for each sweep if necessary.
+</body>
+</html>

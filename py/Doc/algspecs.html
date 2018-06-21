@@ -1,0 +1,77 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Algorithm Specifications Panel</h2>
+<img alt="Algorithm Specifications Panel" src="algspecspanel.gif" 
+align="right" border=1 hspace=3 vspace=3 width=307 height=81>
+This panel has five values:
+<ol>
+<li> The degree of the polynomial used for the noise calculation
+<li> The maximum number of function evaluations
+<li> The termination tolerance for the function value
+( <em>f</em><sub>tol</sub> )
+<li> The termination tolerance for the paramter values
+( <em>x</em><sub> tol</sub> )
+<li> The termination tolerance for the jacobian values
+( <em>g</em><sub>tol</sub> )
+</ol>
+1. The noise is calculated independently for each sweep by fitting a low order
+polynomial (between zero and three) to a portion of the data.
+This region is specified by adjusting the sliders in the
+plotting window.
+(See <a href="regions.html">Fitting and Noise Calculation Regions</a>.)
+The region should contain a moderate number of points (say 30-100 for each
+sweep) and the data in the region should be relatively flat.
+Typically, the final portion of the voltage step for each sweep is 
+adequate.
+<p>
+If the degree of the polynomial is selected too high, the noise level 
+may be underestimated, but this is not too serious.
+If the data in the noise calculation region has little curvature, 
+a polynomial of degree one or two is sufficient.
+<p>
+2. The maximum number of function evaluations (positive integer)
+is used to stop the
+fitting algorithm if it is taking too long.
+The default value should usually be sufficient.
+If the algorithm reaches this limit, it is often because it is having
+difficulting fitting the data, either due to poor initial values,
+one or more parameters being irrelevant to the data, or
+an ill-posed problem ( <em>n</em><sub>n</sub> too high for example).
+If the algorithm terminates because it has reached the limit of function
+evaluations, then a warning message is issued.
+You can increase this number and fit the data again.
+In addition, if you wish to see how a particular set of model parameter
+values fits the data, you can set the maximum number of function
+evaluations to one and click on "Full Fit".  
+This has the effect of displaying
+the curves as determined by the initial values in the plotting window.
+<p>
+3-5. The three tolerance values (non-negative)
+are used to determine when the algorithm
+has converged to a solution.
+The default values will likely be sufficient for most cases.
+Decreasing these values requires the program to obtain a more accurate
+solution.
+Convergence is defined as when one of the following three
+events occurs:
+<ul>
+<li> Both the actual and predicted relative
+reductions in the sum of squares (of data points minus model curve)
+are at most <em>f</em><sub>tol</sub>.
+Therefore, <em>f</em><sub>tol</sub> measures the relative error desired
+in the sum of squares.
+<li> The relative error of the parameter values between two consecutive
+iterates is at most <em>x</em><sub> tol</sub>. 
+Therefore, <em>x</em><sub> tol</sub> measures the
+relative error desired in the approximate solution.
+<li> The cosine of the angle between the vector of residual values and
+any column of the Jacobian is at most <em>g</em><sub>tol</sub> in absolute
+value.  Therefore, <em>g</em><sub>tol</sub> measures how close 
+the derivatives in all directions are to zero at the solution.
+</ul>
+</body>
+</html>

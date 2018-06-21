@@ -1,0 +1,67 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Model Parameters Panel</h2>
+<img alt="Model Parameters Panel" src="parms.gif" align="right"
+border=1 hspace=3 vspace=3 width=373 height=485>
+A list of all of the parameters is given in the Model Parameters Panel,
+which is a scrollable region at the bottom left of the window.  
+The meaning of each parameter is explained in the 
+<a href="math.html">Mathematical Model</a>.
+The values of <em>n</em><sub>h</sub> and <em>n</em><sub>nonh</sub> (set 
+in the <a href="modelspecs.html">Model Specifications Panel</a>)
+dictate whether the parameters <em>V</em><sub>2h</sub>,
+<em>s</em><sub>h</sub>, and <em>f<sub>i</sub></em> are present.
+In addition, <em>n</em><sub>h</sub> and the step potential levels 
+in the data files dictate which time constant parameters are present.
+<p>
+To the left of each parameter name is
+a tick box indicating whether this parameter is to be varied (default)
+or held constant.
+To the right of each parameter there
+are three fields specifying: an initial value, 
+a final fitted value, and a standard error.
+The units for each parameter are also given.  To change these units, see
+<a href="units.html">Measurement Units</a>.
+<p>
+There are transfer buttons for each parameter between the initial and
+fitted value columns which when
+clicked transfer the fitted value to the intial value.  A transfer
+button at the top of the list can be used to transfer all of the values at
+once.  It is not uncommon for the fitting results to be good for some 
+parameters but poor for others.  
+In this case a better fit can usually be obtained by
+transferring the fitted values to the
+initial values, adjusting those that are unreasonable and then re-fitting 
+the data.
+<p>
+As with any nonlinear least squares algorithm, a set of initial guesses for
+the varying parameters must be supplied before a full fit can be done.
+To aid in the selection of initial values,
+the "Quick Fit" option can be used.
+The quick fit option requires only an initial value for
+<em>E</em><sub>rev</sub> to be supplied, and can be used to get 
+the program to do a fast rough fit of the data, the results of which are 
+displayed in the fitted value column and on the plots.
+The transfer button can then be used to transfer these values to
+the initial value column and a full fit can be done.
+The results from the quick fit may not be very accurate and may require the
+user to modify them somewhat in order for the full nonlinear fit
+to converge.
+<p>
+The two green buttons at the top of the model parameters panel will
+instruct the program to do a fit of the specified data.  These functions
+can also be obtained from the <a href="menus.html">Data Menu</a>.
+<p>
+The standard error for each fitted parameter is displayed in the rightmost
+column.  A large standard error typically means the data is insensitive to
+a particular parameter value.
+Additionally, if the data is extremely insensitive to a parameter, the
+Jacobian matrix may be singular.  In this case a warning message is
+displayed in the <a href="results.html">Fitting Results Panel</a> and the
+standard errors of the offending parameters are set to 0.0.
+</body>
+</html>

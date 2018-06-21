@@ -1,0 +1,77 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Fitting Results Panel</h2>
+The Fitting Results Panel has five display fields and a scrollable message
+window.
+<p>
+<table align="center">
+<tr><td>
+<img alt="Fitting Results Panel" src="resultspanel.gif"
+border=1 hspace=3 vspace=3 width=559 height=148>
+</td></tr></table>
+<p>
+After fitting the data, the number of function evaluations, the number
+of jacobian evaluations, the total number of data points used in the
+fit, and the number of fitted parameters are displayed.  
+In addition, the noise scaled variance of the fit is
+displayed.  This latter value is a measure of the goodness of the fit;
+the closer to 1 the better.
+Specifically, the noise scaled variance is the 
+sum of the squares of the ratio of the difference between the
+data and the fit and the noise level.
+Therefore, a value of 5.0 indicates that the error in the 
+fit is about five times the size of the noise.
+A value of 1.0 is as good as one could hope for, although values less
+than 1.0 are possible if the noise is not truly Gaussian or if the
+noise level is over-estimated.  Conversely, non-Gaussian noise or
+an under-estimated noise level may result in a noise scaled variance
+which is higher than it should be.
+It is possible to have relatively high values (on the order of 10)
+for the noise scaled
+variance and still have a visually good fit of the data, particularly if,
+say, just the peaks are missed by the fitted curves.
+The percentage contribution of each sweep to the overall variance is 
+displayed to the right of each sweep number in the
+<a href="datadisp.html">Data Display Panel</a>.
+<p>
+When the user asks NEUROFIT to fit the data, there are several possible
+outcomes.  The algorithm may terminate with
+<ul>
+<li> an ERROR indicating that one or more
+of the initial guesses or input specifications is invalid.
+<li> a WARNING due to having reached the 
+maximum number of specified function evaluations.
+<li> an INFO message indicating successful convergence.
+<li> a WARNING if it determines that the specified tolerance levels are
+too small and no further improvement can be made
+due to the limits of machine precision.
+</ul>
+(See the <a href="algspecs.html">Algorithm Specifications Panel</a>
+for an explanation of how the tolerance levels control convergence.)
+<p>
+In addition, there are two other WARNING messages that may be issued
+along with any of the above.  
+<ol>
+<li> A warning indicating that the noise window specifications 
+permit noise estimates on some but not all of the sweeps.
+This message is displayed if the noise window for one or more (but not all)
+sweeps contains less points than the degree of the noise 
+polynomial plus one. 
+Since a noise level for each sweep must be present for noise adjustment
+to be made, no adjustment is made in this case, but all noise levels are
+set to 1.0.
+<li> A warning indicating that the Jacobian matrix is singular
+at the solution.  This message indicates that the solution is
+essentially unaffected by the value of one or more of the parameters.
+It typically occurs when the algorithm fails to converge and one or more
+parameters gets pushed to a boundary value, or when the data is not
+sufficiently sensitive to that parameter.
+The parameter(s) which cause this are indicated by a standard error
+of 0.0.
+</ol>
+</body>
+</html>

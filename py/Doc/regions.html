@@ -1,0 +1,74 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Fitting and Noise Calculation Regions</h2>
+The fitting region (shown by the green vertical lines on the plotted
+data) indicates which part of the data is to be fit.
+Similarly, the noise calculation region (yellow lines) indicates which
+part of the data is to be used for calculating the noise level.
+<p>
+By default, the fitting region includes all of the data from
+the start of the voltage step to the end of the voltage step,
+and the noise calculation region includes the last tenth
+of the voltage step.
+This is the situation shown in Figure 1.
+If there is contamination in some of the data (for example at the start of
+the voltage step) the fitting region may need to be adjusted to exclude
+some data. 
+The noise calculation region should encompass a reasonable number of
+points within the voltage step where the data traces are
+mostly flat, and may need to be adjusted to accomplish this.
+<p>
+<table align="center">
+<tr><td>
+<img alt="Default Regions" src="regions1.gif" 
+border=1 hspace=3 vspace=3 width=521 height=246>
+</td></tr><tr><td align="center">Figure 1</td></tr>
+</table>
+<p>
+The fitting and noise calculation regions 
+can be adjusted for all of the data of one type (varying
+steps or varying presteps), for each file
+individually, or for each sweep individually
+by first selecting the appropriate data with the selection bars
+and then using the mouse to move the 
+sliders at the bottom of the plotting area.
+<p>
+The data and regions currently displayed on the plot are indicated
+by the orange highlighted data selection bar at the left of the data
+description area.
+There are three levels.
+The leftmost bar encompasses all of the data from all
+of the specified files, the middle bars encompass
+individual files, and the rightmost bars are for each individual sweep
+within a file.
+Adjusting a region at a particular level will apply that new region
+to all lower levels which have not themselves been adjusted.
+In the situation shown in Figure 2, all of the data has been
+selected, we have
+<a href="zoom.html">zoomed</a> in near time zero and then have shifted
+the start of the fitting region so that approximately the first
+millisecond of data, where the recorded current is negative due to
+contamination, will be excluded from the fit.
+Note that once a region has been adjusted, the sliders and reset
+button are outlined in 
+black and the data selection bar has black diagonal stripes.
+<p>
+<table align="center">
+<tr><td>
+<img alt="Adjusted Fitting Region" src="regions2.gif" 
+align="center" border=1 hspace=3 vspace=3 width=517 height=247>
+</td></tr><tr><td align="center">Figure 2</td></tr>
+</table>
+<p>
+To change the fitting region for just one sweep, first
+select that sweep by clicking on the appropriate rightmost bar
+and then adjust the fitting region.
+To return a region to its default setting at a particular level,
+first select the appropriate data and then click on the "reset"
+button at the bottom left of the plot.
+</body>
+</html>

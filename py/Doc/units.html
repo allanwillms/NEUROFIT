@@ -1,0 +1,55 @@
+<html>
+<HEAD>
+<base target="main">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>Measurement Units</h2>
+There are three fundamental dimensions associated with
+the data and parameters:
+time, current, and voltage.  In addition, there is a derived dimension:
+conductance=current/voltage.
+The base units used for these dimensions are SI: seconds, Amperes, Volts.
+<h3>Project Units</h3>
+<table width=100%><tr><td>
+<img alt="Measurement Units..." src="projunits.gif" align="right"
+border=1 hspace=3 vspace=3 width=211 height=240>
+A NEUROFIT project carries a set of units for the fundamental 
+dimensions
+and all display and computation is performed with these units.  
+The project
+units can be changed (thus scaling the affected data and parameter values)
+by selecting "Measurement Units..." from the 
+<a href="menus.html">Data Menu</a>.
+Note that scaling the voltage will also affect the names of the time
+constant parameters.
+The conductance parameters will be adjusted appropriately whenever the
+voltage or current units are changed.
+<p>
+If you have opened a new project, the project units will initially be
+undefined.  If they are not defined by specifying them as described above,
+then the units for the first file read in will be used as the project
+units.
+</td></tr></table>
+<h3>File Units</h3>
+<table width=100%><tr><td>
+The data in each file also carries (explicitly for <code>abf</code> files,
+implicitly for text files) a set of units for the fundamental
+dimensions of time, current and voltage.
+Data for each file is scaled to the project units before displaying
+and computation.
+<p>
+If a file is
+an <code>abf</code> file, the units for time, current, and voltage will be 
+determined from the file's header (or directly from the user if it
+cannot be determined from the header for some reason).
+If a file is a text file,
+you will be required to specify the units for the time and the
+current when you first select the file, see
+<a href="fileselect.html">Data File Selection</a>.
+Voltage units are
+specified later when voltage levels are entered, see 
+<a href="voltagespecs.html">Voltage and Voltage Step Specifications</a>.
+</td></tr></table>
+</body>
+</html>

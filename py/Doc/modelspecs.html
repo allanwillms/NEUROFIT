@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>NEUROFIT HELP</title>
+<base target="main">
+</head>
+<body>
+<h2>
+Model Specifications Panel</h2>
+<img SRC="modelspecspanel.gif" ALT="Model Specifications Panel" HSPACE=4 BORDER=1 height=89 width=237 align=RIGHT>
+There are three values that need to be filled in to specify the model:
+<ol>
+<li>
+The number of inactivating channel groups (<i>n</i><sub>h</sub> )</li>
+<li>
+The number of non-inactivating channel groups (<i>n</i><sub>nonh</sub>
+)</li>
+<li>
+The number of independent activation gates ( <i>p</i> )</li>
+</ol>
+1. The number of inactivating channel groups must be an integer between
+zero and three. As <i>n</i><sub>h</sub> increases, the problem of fitting
+the data becomes ill-posed and satisfactory results are unlikely.
+<p>2. The number of non-inactivating channel groups must be either zero
+or one, but must be one if <i>n</i><sub>h</sub> is zero.&nbsp; For example,
+to fit data from a channel which has no inactivation, set
+<i>n</i><sub>h</sub>
+to zero and <i>n</i><sub>nonh</sub> to one. For data which has two time
+constants of inactivation and a residual non-inactivating component, set
+<i>n</i><sub>h</sub> to two and
+<i>n</i><sub>nonh</sub> to one.
+<p>3. The number of independent activation gates can be any positive integer.
+Although this number has historically been often set to three or four,
+unless your data shows a distinct delay in the rise of the current at the
+start of the voltage step, <i>p</i> should be set to one.
+<p>See the <a href="math.html">Mathematical Model</a> for a complete explanation
+of how these parameters affect the specification of the model.
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+<HEAD>
+<base target="_top">
+<title>NEUROFIT HELP</title>
+</HEAD>
+<BODY>
+<h2>About NEUROFIT</h2>
+<big><strong>This is version 1.7</strong></big> released May 21,
+2004.
+<a target="_self" href="releasenotes.html">Release Notes</a>.
+<p>
+NEUROFIT is a program which fits Hodgkin-Huxley models to voltage-clamp data.
+NEUROFIT is available freely online at
+<div align="center">
+<code>
+<a href="http://www.uoguelph.ca/~awillms/neurofit/">
+http://www.uoguelph.ca/~awillms/neurofit/</a>.
+</code>
+</div>
+NEUROFIT should run on any Microsoft Windows environment.
+<p>
+Bug reports and comments should be sent to 
+<a href="mailto:AWillms@uoguelph.ca?subject=NEUROFIT bug report">
+Allan Willms</a>.
+<h3>Installation Instructions</h3>
+<ol>
+<li><a target="_self" href="http://www.uoguelph.ca/~awillms/neurofit/NEUROFITInstall.zip">Download <code>NEUROFITInstall.zip</code>
+</a> (2.8 MB)
+<li>Install NEUROFIT by simply unzipping the file
+<code>NEUROFITInstall.zip</code> somewhere; it doesn't matter
+where. You will get a directory called <code>NEUROFIT</code>.
+<li> To run NEUROFIT, launch <code>NEUROFIT.exe</code> in the
+<code>NEUROFIT</code> directory.
+<li> Usage instructions and a tutorial are available from within NEUROFIT by
+clicking on "Help".
+<li><a href="mailto:AWillms@uoguelph.ca?subject=NEUROFIT Registration">Register via email</a>
+to receive email notification whenever this software is updated.
+</ol>
+<h3>Acknowledgements</h3>
+The code which performs the nonlinear least squares fitting is a C
+translation and adaptation of an implementation of the 
+Levenberg-Marquardt algorithm written in Fortran and freely available from the
+<a href="http://www.netlib.org/">Netlib Mathematical Software Repository</a>
+(lmder.f).
+The translation was done by Howie Kuo and adaptations to allow for linear
+inequality constraints was completed by 
+Allan Willms.  The remainder of the code for the nonlinear fitting 
+algorithm, and all of the code for the quick fit linear algorithm was 
+written by Allan Willms.
+The user interface was written by Greg Ewing and Allan Willms using 
+the Python interpretive language
+(freely available from
+<code><a href="http://python.org/">http://python.org/</a></code>).
+A Python interpreter is bundled as part of the NEUROFIT package.
+<p>
+Support for this project has been given by:
+<ul compact>
+<li> The University of Canterbury, Internal Research Grant U6322.
+<li> The Royal Society of New Zealand, International Science and Technology
+Linkages Fund, NZ/USA Co-operative Science Programme, grants 99-CSP-49-WILL 
+and 01-CSP-44-WILL.
+<li> The laboratory of Prof. R.M. Harris-Warrick, Department of Neurobiology
+and Behavior, Cornell University, Ithaca,
+USA.
+</ul>
+
+<h3>References</h3>
+This software is introduced and its convergence properties are described
+in:
+<br>
+A.R. Willms,
+<cite>NEUROFIT: software for fitting Hodgkin-Huxley models to voltage-clamp
+data</cite>,
+J. Neurosci. Meth. <strong>121</strong> (2002), 139-150.
+<p>
+The nonlinear fitting algorithm is described in:
+<br>
+A.R. Willms, D.J. Baro, R.M. Harris-Warrick, and
+J. Guckenheimer,
+<cite>An improved parameter estimation method for Hodgkin-Huxley
+models</cite>,
+J. Comput. Neurosci. <strong>6</strong> (1999), 145-168. 
+<p>
+The quick fit algorithm is based on the one described in:
+<br>
+T.I. T&#243;th and V. Crunelli, <cite>A numerical procedure to estimate
+kinetic and steady-state characteristics of inactivating ionic
+currents</cite>, J. Neurosci. Meth. <strong>63</strong> (1995), 1-12.
+</body>
+</html>
