@@ -1,0 +1,26 @@
+[Project]
+Help Compiler=HCP.EXE
+Remove Unused=1
+Version=512
+ConvertedFromV1=0
+HasGlossary=0
+Automatic Map Files=1
+NextFile=2
+CopyTo=1
+CopyToDir=D:\ATW\AXATFFIO
+Extra Language=0
+CurrentDir=D:\ATW\AXATFFIO\DOCS
+
+[Document Files]
+ATFAPI.DOC=1
+
+[File Properties]
+HasProperties=1
+BrowseType=0
+AutoMapFile=1
+StartingWith=0
+IncrementBy=20
+NextTopicNumber=0
+StartingNumber=1
+BrowseString=ATFAPI
+DefaultBuildTag=
