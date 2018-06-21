@@ -1,0 +1,202 @@
+% NEUROFIT Project File. Do not edit.
+Version = 7
+% Model parameters
+ModelType = 1
+nh = 2
+nnonh = 0
+p = 1 % no. of independent activation gates
+noise_deg = 2 % noise polynomial degree
+tol_f = 1e-006 % function tolerance
+tol_x = 1e-006 % solution tolerance
+tol_g = 1e-006 % gradient tolerance
+nevalfac = 500 % max function evals
+units = -3 -9 -3 % time current voltage
+% Varying step potential experiment
+nSweepSets = 1
+SweepSet: 0
+file = "eg1_vs.abf"
+channel = 1
+fileUnits = -3 -9 -3 % time current voltage
+Vhold = -90.0
+% specified data regions for sweep set
+fitRegion = None
+noiseRegion = None
+nSweeps = 9
+Sweep: 0
+Vsweep = -40.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 1
+Vsweep = -30.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 2
+Vsweep = -20.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 3
+Vsweep = -10.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 4
+Vsweep = 0.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 5
+Vsweep = 10.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 6
+Vsweep = 20.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 7
+Vsweep = 30.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 8
+Vsweep = 40.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+% Custom axis settings
+CustomAxisLimits_x = None
+CustomAxisLimits_y = None
+% specified data regions for experiment
+fitRegion = 1.29435 199.9
+noiseRegion = None
+% Varying pre-step potential experiment
+nSweepSets = 1
+SweepSet: 0
+file = "eg1_vp.abf"
+channel = 1
+fileUnits = -3 -9 -3 % time current voltage
+Vhold = 40.0
+% specified data regions for sweep set
+fitRegion = None
+noiseRegion = None
+nSweeps = 9
+Sweep: 0
+Vsweep = -90.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 1
+Vsweep = -80.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 2
+Vsweep = -70.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = None
+noiseRegion = None
+Sweep: 3
+Vsweep = -60.0
+step_epoch_ends = 312 2311
+fit = 1
+fitRegion = 1.26006 172.071
+noiseRegion = None
+Sweep: 4
+Vsweep = -50.0
+step_epoch_ends = 312 2311
+fit = 0
+fitRegion = None
+noiseRegion = None
+Sweep: 5
+Vsweep = -40.0
+step_epoch_ends = 312 2311
+fit = 0
+fitRegion = None
+noiseRegion = None
+Sweep: 6
+Vsweep = -30.0
+step_epoch_ends = 312 2311
+fit = 0
+fitRegion = None
+noiseRegion = None
+Sweep: 7
+Vsweep = -20.0
+step_epoch_ends = 312 2311
+fit = 0
+fitRegion = None
+noiseRegion = None
+Sweep: 8
+Vsweep = -10.0
+step_epoch_ends = 312 2311
+fit = 0
+fitRegion = None
+noiseRegion = None
+% Custom axis settings
+CustomAxisLimits_x = None
+CustomAxisLimits_y = None
+% specified data regions for experiment
+fitRegion = 1.26006 199.9
+noiseRegion = None
+% Fitting parameters
+% initial_value fitted_value fit?
+Erev = -80.0 -71.2520581954 1 % reversal potential
+gmax = 5.84839 6.27772083798 1 % maximum conductance
+f1 = 0.519018 0.502889154844 1 % fraction of channels in group 1
+V2m = -34.0486 -34.8941416013 1 % half activation voltage
+sm = -16.2526 -6.75255208519 1 % activation slope factor
+V2h = -70.3102 -69.964168102 1 % half inactivation voltage
+sh = 4.44159 5.05164194376 1 % inactivation slope factor
+% Time constants
+nVoltages = 9
+Voltage: -40.0
+Tm(-40) = 13.7142 7.9403196939 1 % activation time constant at -40
+Th1(-40) = 21.5166 23.4776744941 1 % inactivation time constant for group 1 at -40
+Th2(-40) = 22.6491 63.2846917145 1 % inactivation time constant for group 2 at -40
+Voltage: -30.0
+Tm(-30) = 5.24131 6.51760054851 1 % activation time constant at -30
+Th1(-30) = 19.6112 16.3976945637 1 % inactivation time constant for group 1 at -30
+Th2(-30) = 66.0986 49.0653669665 1 % inactivation time constant for group 2 at -30
+Voltage: -20.0
+Tm(-20) = 2.66845 4.54415713206 1 % activation time constant at -20
+Th1(-20) = 23.4759 12.7106045272 1 % inactivation time constant for group 1 at -20
+Th2(-20) = 85.5644 58.1133982701 1 % inactivation time constant for group 2 at -20
+Voltage: -10.0
+Tm(-10) = 1.81929 3.22106489816 1 % activation time constant at -10
+Th1(-10) = 25.4648 13.3660532239 1 % inactivation time constant for group 1 at -10
+Th2(-10) = 105.584 73.7028358812 1 % inactivation time constant for group 2 at -10
+Voltage: 0.0
+Tm(0) = 1.45142 2.41966147237 1 % activation time constant at 0
+Th1(0) = 26.1095 16.0464063591 1 % inactivation time constant for group 1 at 0
+Th2(0) = 121.473 93.0408171801 1 % inactivation time constant for group 2 at 0
+Voltage: 10.0
+Tm(10) = 1.12937 1.92549747732 1 % activation time constant at 10
+Th1(10) = 26.7075 19.8808372984 1 % inactivation time constant for group 1 at 10
+Th2(10) = 136.039 114.433876001 1 % inactivation time constant for group 2 at 10
+Voltage: 20.0
+Tm(20) = 1.15487 1.58618102666 1 % activation time constant at 20
+Th1(20) = 27.1154 24.1651055061 1 % inactivation time constant for group 1 at 20
+Th2(20) = 147.258 134.832064888 1 % inactivation time constant for group 2 at 20
+Voltage: 30.0
+Tm(30) = 0.952348 1.40397414766 1 % activation time constant at 30
+Th1(30) = 26.1698 28.4123088784 1 % inactivation time constant for group 1 at 30
+Th2(30) = 153.954 156.070186764 1 % inactivation time constant for group 2 at 30
+Voltage: 40.0
+Tm(40) = 0.811529 1.32025861387 1 % activation time constant at 40
+Th1(40) = 26.8051 31.889684074 1 % inactivation time constant for group 1 at 40
+Th2(40) = 164.189 187.832225785 1 % inactivation time constant for group 2 at 40
