@@ -1,5 +1,5 @@
 # NEUROFIT  Version 1.7
-NEUROFIT is a program which fits Hodgkin-Huxley models to voltage-clamp data.
+NEUROFIT is a program that fits Hodgkin-Huxley models to voltage-clamp data.
 
 NEUROFIT should run on any Microsoft Windows environment.
 
