@@ -14,7 +14,7 @@ Installation Instructions
     A.R. Willms, NEUROFIT: Software for fitting Hodgkin-Huxley models to voltage-clamp data, J. Neurosci. Meth. 121 (2002), 139-150. 
       </ul>
 
-Acknowledgements
+<h3>Acknowledgements</h3>
 The code which performs the nonlinear least squares fitting is a C translation and adaptation of an implementation of the Levenberg-Marquardt algorithm written in Fortran and freely available from the Netlib Mathematical Software Repository (lmder.f). The translation was done by Howie Kuo and adaptations to allow for linear inequality constraints were completed by Allan Willms. The remainder of the code for the nonlinear fitting algorithm, and all of the code for the quick fit linear algorithm was written by Allan Willms. The user interface was written by Greg Ewing and Allan Willms using the Python interpretive language (freely available from http://python.org/). A Python interpreter is bundled as part of the NEUROFIT package.
 
 Support for this project has been given by:
@@ -24,7 +24,7 @@ Support for this project has been given by:
    <li> The laboratory of Prof. R.M. Harris-Warrick, Department of Neurobiology and Behavior, Cornell University, Ithaca, USA. 
 </ul>
 
-References
+<h3>References</h3>
 This software is introduced and its convergence properties are described in:
 <ul>
 <li>A.R. Willms, NEUROFIT: Software for fitting Hodgkin-Huxley models to voltage-clamp data, J. Neurosci. Meth. 121 (2002), 139-150.
