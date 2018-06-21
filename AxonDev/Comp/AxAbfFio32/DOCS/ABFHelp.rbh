@@ -1,0 +1,34 @@
+[.RBH]
+CurrentDir=C:\AxonDev\Comp\AxABFFio32\DOCS
+AutoFixRTF=0
+CopyTo=0
+PreBatch=
+PostBatch=
+
+[Project]
+Help Compiler=HCW.EXE
+Extra Language=0
+Remove Unused=0
+Automatic Map Files=1
+IncludeRTF=0
+NextFile=5
+WH2RH=1
+
+[File Properties]
+HasProperties=1
+BrowseType=0
+AutoMapFile=1
+StartingWith=0
+IncrementBy=20
+NextTopicNumber=0
+StartingNumber=1
+BrowseString=ABFHELP:0
+DefaultBuildTag=
+
+[Document Files]
+ABFHELP.DOC=1
+ABFFiles.DOC=2
+ABFFunc.DOC=3
+ABFHeadr.doc=4
+[VERSION]
+RHFile=4.1

@@ -1,0 +1,202 @@
+:Base ABFHELP.HLP
+1 Overview=IDH_OVERVIEW
+1 Glossary=IDH_Glossary@ABFHELP.HLP>main
+1 The ABF File Format
+2 History=History@ABFHELP.HLP>main
+2 Existing Applications=Existing_Applications@ABFHELP.HLP>main
+2 What Kind Of Data Are Stored In ABF Files?=What_Kind_Of_Data_Are_Stored_In_ABF_Files@ABFHELP.HLP>main
+2 The ABF File Structure
+3 Overview=The_ABF_File_Structure
+3 The ABF Header Section=The_ABF_Header_Section
+3 The ABF Scope Config Section=The_ABF_Scope_Config_Section
+3 The ABF Data Section=The_ABF_Data_Section
+3 The ABF Synch Section=The_ABF_Synch_Section
+3 The ABF Tag Section=The_ABF_Tag_Section
+3 The ABF Deltas Section=The_ABF_Deltas_Section
+3 The DAC Data Section=The_DAC_Data_Section
+1 The ABF Function API
+2 Advantages Of Using The ABF Function API=Advantages_Of_Using_The_ABF_Function_API@ABFHELP.HLP>main
+2 The ABF File I/O Functions
+3 Overview=The_ABF_File_I_O_Functions
+3 ABF_BuildErrorText=ABF_BuildErrorText
+3 ABF_Cleanup=ABF_Cleanup
+3 ABF_Close=ABF_Close
+3 ABF_EpisodeFromSynchCount=ABF_EpisodeFromSynchCount
+3 ABF_FormatTag=ABF_FormatTag
+3 ABF_GetEpisodeDuration=ABF_GetEpisodeDuration
+3 ABF_GetEpisodeFileOffset=ABF_GetEpisodeFileOffset
+3 ABF_GetFileHandle=ABF_GetFileHandle
+3 ABF_GetNumSamples=ABF_GetNumSamples
+3 ABF_GetMissingSynchCount=ABF_GetMissingSynchCount
+3 ABF_GetStartTime=ABF_GetStartTime
+3 ABF_GetSynchArray=ABF_GetSynchArray
+3 ABF_GetWaveform=ABF_GetWaveform
+3 ABF_HasData=ABF_HasData
+3 ABF_Initialize=ABF_Initialize
+3 ABF_IsABFFile=ABF_IsABFFile
+3 ABF_MultiplexRead=ABF_MultiplexRead
+3 ABF_MultiplexWrite=ABF_MultiplexWrite
+3 ABF_ReadChannel=ABF_ReadChannel
+3 ABF_ReadDACFileEpi=ABF_ReadDACFileEpi
+3 ABF_ReadOpen=ABF_ReadOpen
+3 ABF_ReadRawChannel=ABF_ReadRawChannel
+3 ABF_ReadScopeConfig=ABF_ReadScopeConfig
+3 ABF_ReadTags=ABF_ReadTags
+3 ABF_SetErrorCallback=ABF_SetErrorCallback
+3 ABF_SynchCountFromEpisode=ABF_SynchCountFromEpisode
+3 ABF_UpdateAfterAcquisition=ABF_UpdateAfterAcquisition
+3 ABF_UpdateHeader=ABF_UpdateHeader
+3 ABF_WriteDACFileEpi=ABF_WriteDACFileEpi
+3 ABF_WriteOpen=ABF_WriteOpen
+3 ABF_WriteRawData=ABF_WriteRawData
+3 ABF_WriteScopeConfig=ABF_WriteScopeConfig
+3 ABF_WriteTag=ABF_WriteTag
+3 Error Return Values=Error_Return_Values
+2 The ABF File I/O Functions by category
+3 Initialization/Cleanup
+4 Overview=Initialization_Cleanup
+4 ABF_Initialize=ABF_Initialize
+4 ABF_Cleanup=ABF_Cleanup
+3 File Open/Close
+4 Overview=File_Open_Close
+4 ABF_ReadOpen=ABF_ReadOpen
+4 ABF_WriteOpen=ABF_WriteOpen
+4 ABF_Close=ABF_Close
+4 ABF_UpdateHeader=ABF_UpdateHeader
+3 High Level File Reading
+4 Overview=High_Level_File_Reading
+4 ABF_ReadChannel=ABF_ReadChannel
+4 ABF_GetWaveform=ABF_GetWaveform
+3 Low Level File Read/Write
+4 Overview=Low_Level_File_Read_Write
+4 ABF_MultiplexRead=ABF_MultiplexRead
+4 ABF_MultiplexWrite=ABF_MultiplexWrite
+4 ABF_ReadTags=ABF_ReadTags
+4 ABF_WriteTag=ABF_WriteTag
+4 ABF_GetVoiceTag=ABF_GetVoiceTag
+4 ABF_SaveVoiceTag=ABF_SaveVoiceTag
+4 ABF_PlayVoiceTag=ABF_PlayVoiceTag
+4 ABF_ReadDeltas=ABF_ReadDeltas
+4 ABF_FormatDelta=ABF_FormatDelta
+4 ABF_WriteDelta=ABF_WriteDelta
+4 ABF_ReadScopeConfig=ABF_ReadScopeConfig
+4 ABF_WriteScopeConfig=ABF_WriteScopeConfig
+4 ABF_WriteStatisticsConfig=ABF_WriteStatisticsConfig
+4 ABF_ReadDACFileEpi=ABF_ReadDACFileEpi
+4 ABF_WriteDACFileEpi=ABF_WriteDACFileEpi
+4 ABF_ReadRawChannel=ABF_ReadRawChannel
+4 ABF_WriteRawData=ABF_WriteRawData
+3 Miscellaneous Functions
+4 Overview=Miscellaneous_Functions
+4 ABF_BuildErrorText=ABF_BuildErrorText
+4 ABF_FindEpisode=ABF_FindEpisode
+4 ABF_FindEpisodeStart=ABF_FindEpisodeStart
+4 ABF_FormatTag=ABF_FormatTag
+4 ABF_GetEpisodeDuration=ABF_GetEpisodeDuration
+4 ABF_GetEpisodeFileOffset=ABF_GetEpisodeFileOffset
+4 ABF_GetMissingSamples=ABF_GetMissingSamples
+4 ABF_GetNumSamples=ABF_GetNumSamples
+4 ABF_GetStartTime=ABF_GetStartTime
+4 ABF_HasData=ABF_HasData
+4 ABF_HasOverlappedData=ABF_HasOverlappedData
+4 ABF_IsABFFile=ABF_IsABFFile
+4 ABF_SetErrorCallback=ABF_SetErrorCallback
+3 Use With Care!
+4 Overview=Use_With_Care
+4 ABF_GetSynchArray=ABF_GetSynchArray
+4 ABF_GetFileHandle=ABF_GetFileHandle
+4 ABF_UpdateAfterAcquisition=ABF_UpdateAfterAcquisition
+3 Notes
+4 Verification of ABF Function Usage=Verification_of_ABF_Function_Usage
+4 Altering Existing Raw Data Files=Altering_Existing_Raw_Data_Files
+4 Compilers=Compilers
+4 Error Return Values=Error_Return_Values
+2 The ABF Header Functions
+3 ABFH_DisplayRangeToGainOffset=ABFH_DisplayRangeToGainOffset
+3 ABFH_CheckSampleIntervals=ABFH_CheckSampleIntervals
+3 ABFH_CheckScopeConfig=ABFH_CheckScopeConfig
+3 ABFH_CheckUserList=ABFH_CheckUserList
+3 ABFH_ClipADCUUValue=ABFH_ClipADCUUValue
+3 ABFH_ClipDACUUValue=ABFH_ClipDACUUValue
+3 ABFH_GainOffsetToDisplayRange=ABFH_GainOffsetToDisplayRange
+3 ABFH_GetADCDisplayRange=ABFH_GetADCDisplayRange
+3 ABFH_GetADCtoUUFactors=ABFH_GetADCtoUUFactors
+3 ABFH_GetChannelOffset=ABFH_GetChannelOffset
+3 ABFH_GetClockChange=ABFH_GetClockChange
+3 ABFH_GetClosestSampleIntervals=ABFH_GetClosestSampleIntervals
+3 ABFH_GetDACtoUUFactors=ABFH_GetDACtoUUFactors
+3 ABFH_GetDigitalWaveform=ABFH_GetDigitalWaveform
+3 ABFH_GetEpisodeDuration=ABFH_GetEpisodeDuration
+3 ABFH_GetEpisodeStartToStart=ABFH_GetEpisodeStartToStart
+3 ABFH_GetEpochLimits=ABFH_GetEpochLimits
+3 ABFH_GetErrorText=ABFH_GetErrorText
+3 ABFH_GetHoldingDuration=ABFH_GetHoldingDuration
+3 ABFH_GetMathChannelName=ABFH_GetMathChannelName
+3 ABFH_GetMathValue=ABFH_GetMathValue
+3 ABFH_GetMetaEpisodeDuration=ABFH_GetMetaEpisodeDuration
+3 ABFH_GetPNDuration=ABFH_GetPNDuration
+3 ABFH_GetTimebase=ABFH_GetTimebase
+3 ABFH_GetTimebaseEx=ABFH_GetTimebaseEx
+3 ABFH_GetTrainDuration=ABFH_GetTrainDuration
+3 ABFH_GetWaveform=ABFH_GetWaveform
+3 ABFH_GetWaveformVector=ABFH_GetWaveformVector
+3 ABFH_Initialize=ABFH_Initialize
+3 ABFH_InitializeScopeConfig=ABFH_InitializeScopeConfig
+3 ABFH_IsConstantWaveform=ABFH_IsConstantWaveform
+3 ABFH_MSToSynchCount=ABFH_MSToSynchCount
+3 ABFH_ParamReader=ABFH_ParamReader
+3 ABFH_ParamWriter=ABFH_ParamWriter
+3 ABFH_SetupSamplingList=ABFH_SetupSamplingList
+3 ABFH_SweepLenFromUserLen=ABFH_SweepLenFromUserLen
+3 ABFH_SynchCountToMS=ABFH_SynchCountToMS
+3 ABFH_UserLenFromSweepLen=ABFH_UserLenFromSweepLen
+2 The ABF Header Functions by category
+3 Header Reading and Writing
+4 ABFH_ParamReader=ABFH_ParamReader
+4 ABFH_ParamWriter=ABFH_ParamWriter
+3 Miscellaneous Header Functions
+4 ABFH_Initialize=ABFH_Initialize
+4 ABFH_InitializeScopeConfig=ABFH_InitializeScopeConfig
+4 ABFH_CheckScopeConfig=ABFH_CheckScopeConfig
+4 ABFH_CheckSampleIntervals=ABFH_CheckSampleIntervals
+4 ABFH_GetMathChannelName=ABFH_GetMathChannelName
+4 ABFH_GetMathValue=ABFH_GetMathValue
+4 ABFH_GetClosestSampleIntervals=ABFH_GetClosestSampleIntervals
+4 ABFH_SetupSamplingList=ABFH_SetupSamplingList
+4 ABFH_GetClockChange=ABFH_GetClockChange
+4 ABFH_GetChannelOffset=ABFH_GetChannelOffset
+4 ABFH_GetErrorText=ABFH_GetErrorText
+4 ABFH_GetADCDisplayRange=ABFH_GetADCDisplayRange
+4 ABFH_MSToSynchCount=ABFH_MSToSynchCount
+4 ABFH_SynchCountToMS=ABFH_SynchCountToMS
+4 ABFH_GetEpisodeStartToStart=ABFH_GetEpisodeStartToStart
+4 ABFH_GetEpisodeDuration=ABFH_GetEpisodeDuration
+4 ABFH_GetMetaEpisodeDuration=ABFH_GetMetaEpisodeDuration
+4 ABFH_GetPNDuration=ABFH_GetPNDuration
+4 ABFH_GetTrainDuration=ABFH_GetTrainDuration
+4 ABFH_CheckUserList=ABFH_CheckUserList
+3 User Units Conversions
+4 ABFH_GetADCtoUUFactors=ABFH_GetADCtoUUFactors
+4 ABFH_ClipADCUUValue=ABFH_ClipADCUUValue
+4 ABFH_GetDACtoUUFactors=ABFH_GetDACtoUUFactors
+4 ABFH_ClipDACUUValue=ABFH_ClipDACUUValue
+4 ABFH_GainOffsetToDisplayRange=ABFH_GainOffsetToDisplayRange
+4 ABFH_DisplayRangeToGainOffset=ABFH_DisplayRangeToGainOffset
+3 Waveform Functions
+4 ABFH_GetHoldingDuration=ABFH_GetHoldingDuration
+4 ABFH_GetDigitalWaveform=ABFH_GetDigitalWaveform
+4 ABFH_GetEpochLimits=ABFH_GetEpochLimits
+4 ABFH_GetWaveform=ABFH_GetWaveform
+4 ABFH_GetWaveformVector=ABFH_GetWaveformVector
+4 ABFH_IsConstantWaveform=ABFH_IsConstantWaveform
+4 ABFH_GetTimebase=ABFH_GetTimebase
+4 ABFH_GetTimebaseEx=ABFH_GetTimebaseEx
+4 ABFH_SweepLenFromUserLen=ABFH_SweepLenFromUserLen
+4 ABFH_UserLenFromSweepLen=ABFH_UserLenFromSweepLen
+2 The ABF File Information Functions
+3 INFO_GetBufferSize=INFO_GetBufferSize
+3 INFO_GetInfo=INFO_GetInfo
+1 The ABF Support Pack
+2 Source Code=Source_Code@ABFHELP.HLP>main
+2 Example Data Files=Example_Data_Files@ABFHELP.HLP>main
+2 Technical Support=Technical_Support@ABFHELP.HLP>main
